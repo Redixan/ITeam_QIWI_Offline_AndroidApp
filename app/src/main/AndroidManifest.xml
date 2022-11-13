@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:targetApi="32">
+        <activity
+            android:name=".WaitingForPurchaserPaymentActivity"
+            android:exported="false"
+            android:label="@string/payment_completion"
+            android:theme="@style/Theme.AppCompat.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".QRpayMerchantActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".NFCpayMerchantActivity"
+            android:exported="false"
+            android:label="@string/contactless_payment"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".InputAmountActivity"
+            android:exported="false"
+            android:label="@string/contactless_payment"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PaymentSuccessfullActivity"
+            android:exported="false"
+            android:label="@string/payment_completion"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ConfirmWithTokenActivity"
+            android:exported="false"
+            android:label="@string/confirmation_payment"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ConfirmActivity"
+            android:exported="false"
+            android:label="@string/confirmation_payment"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SettingsMerchantActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MerchantActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SettingsPurchaserActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".QRpayPurchaserAcitivity"
+            android:exported="false"
+            android:label="@string/contactless_payment"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".NFCpayPurchaserActivity"
+            android:exported="false"
+            android:label="@string/contactless_payment"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PurchaserOrMerchantActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PasswordEnterActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PasswordMakeActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PurchaserActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+    </application>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+
+</manifest>

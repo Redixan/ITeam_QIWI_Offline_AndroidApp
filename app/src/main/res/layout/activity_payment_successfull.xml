@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentSuccessfullActivity">
+
+    <TextView
+        android:id="@+id/paymentView"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_with_borders"
+        android:ems="12"
+        android:lineSpacingExtra="6sp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/payment_in_shop_with_balance"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/paymentAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="8dp"
+        android:text="1547,99 ₽"
+        android:textColor="@color/teal_200"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/paymentView"
+        app:layout_constraintTop_toTopOf="@+id/paymentView" />
+
+    <TextView
+        android:id="@+id/shopNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="37.9dp"
+        android:text="JavaShop"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/paymentView"
+        app:layout_constraintTop_toTopOf="@+id/paymentView" />
+
+    <TextView
+        android:id="@+id/balanceAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="97dp"
+        android:text="9522,11 ₽"
+        android:textColor="@color/qiwi_orange"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/paymentView"
+        app:layout_constraintTop_toTopOf="@+id/paymentView" />
+
+    <Button
+        android:id="@+id/acceptPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/a_bit_rounded_button"
+        android:backgroundTint="@color/qiwi_green"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/ready"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/check_mark" />
+
+    <TextView
+        android:id="@+id/paymentSuccessfullText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22.5dp"
+        android:text="@string/payment_successfull"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

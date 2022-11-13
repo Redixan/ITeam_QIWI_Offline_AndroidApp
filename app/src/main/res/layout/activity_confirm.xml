@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmActivity">
+
+    <TextView
+        android:id="@+id/paymentView"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_with_borders"
+        android:ems="12"
+        android:lineSpacingExtra="6sp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/payment_in_shop"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/paymentAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="8dp"
+        android:text="1547,99 ₽"
+        android:textColor="@color/qiwi_orange"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/paymentView"
+        app:layout_constraintTop_toTopOf="@+id/paymentView" />
+
+    <TextView
+        android:id="@+id/shopNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="37.9dp"
+        android:text="JavaShop"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/paymentView"
+        app:layout_constraintTop_toTopOf="@+id/paymentView" />
+
+    <TextView
+        android:id="@+id/smsSent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/sms_sent"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentView" />
+
+    <TextView
+        android:id="@+id/phoneNumberConfirmationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="21dp"
+        android:text="+79817902725"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/smsSent"
+        app:layout_constraintTop_toTopOf="@+id/smsSent" />
+
+    <EditText
+        android:id="@+id/codeInput"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/black"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColorHighlight="@color/black"
+        android:textColorLink="@color/black"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smsSent" />
+
+    <TextView
+        android:id="@+id/sendAgainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/send_again"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codeInput" />
+
+    <TextView
+        android:id="@+id/timeLeftText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="117 сек"
+        app:layout_constraintStart_toEndOf="@+id/sendAgainText"
+        app:layout_constraintTop_toBottomOf="@+id/codeInput" />
+
+    <Button
+        android:id="@+id/denyPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/a_bit_rounded_button"
+        android:backgroundTint="@color/qiwi_orange"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/deny_payment"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendAgainText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

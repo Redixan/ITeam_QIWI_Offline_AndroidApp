@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_button"
+    tools:context=".PurchaserOrMerchantActivity">
+
+    <TextView
+        android:id="@+id/howToUseAppText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="@string/how_are_you_going_to_use_app"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/iAmPurchaser"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/a_bit_rounded_button"
+        android:backgroundTint="@color/qiwi_orange"
+        android:onClick="onClickIAmPurchaser"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/i_am_purchaser"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/howToUseAppText" />
+
+    <Button
+        android:id="@+id/iAmMerchant"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/a_bit_rounded_button"
+        android:backgroundTint="@color/qiwi_dark_blue"
+        android:onClick="onClickIAmMerchant"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="@string/i_am_merchant"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iAmPurchaser" />
+
+    <TextView
+        android:id="@+id/youCanChangeModeText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/you_can_change_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iAmMerchant" />
+</androidx.constraintlayout.widget.ConstraintLayout>

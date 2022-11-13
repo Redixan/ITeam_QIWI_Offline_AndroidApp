@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsMerchantActivity">
+
+  <ImageView
+      android:id="@+id/woodpeckerImage"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_marginStart="28dp"
+      android:layout_marginTop="28dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/woodpecker" />
+
+  <TextView
+      android:id="@+id/qiwiWalletText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="4dp"
+      android:layout_marginTop="40dp"
+      android:text="@string/qiwi_wallet_number"
+      app:layout_constraintStart_toEndOf="@+id/woodpeckerImage"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/phoneNumberText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="4dp"
+      android:layout_marginTop="4dp"
+      android:text="+7 (919) 901-86-50"
+      android:textColor="@color/black"
+      android:textSize="22sp"
+      app:layout_constraintStart_toEndOf="@+id/woodpeckerImage"
+      app:layout_constraintTop_toBottomOf="@+id/qiwiWalletText" />
+
+  <LinearLayout
+      android:id="@+id/linearLayout2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="148dp"
+      android:layout_marginEnd="16dp"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <ImageButton
+          android:id="@+id/customs"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:backgroundTint="@color/white"
+          android:scaleType="fitEnd"
+          app:srcCompat="@drawable/ic_baseline_chevron_right_24" />
+
+      <TextView
+          android:id="@+id/customsText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="14dp"
+          android:layout_marginTop="20dp"
+          android:text="@string/settings"
+          android:textColor="@color/black" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-12dp">
+
+      <ImageButton
+          android:id="@+id/security"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:backgroundTint="@color/white"
+          android:scaleType="fitEnd"
+          app:srcCompat="@drawable/ic_baseline_chevron_right_24" />
+
+      <TextView
+          android:id="@+id/securityText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="14dp"
+          android:layout_marginTop="20dp"
+          android:text="@string/security"
+          android:textColor="@color/black" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-12dp">
+
+      <ImageButton
+          android:id="@+id/help"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:backgroundTint="@color/white"
+          android:scaleType="fitEnd"
+          app:srcCompat="@drawable/ic_baseline_chevron_right_24" />
+
+      <TextView
+          android:id="@+id/helpText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="14dp"
+          android:layout_marginTop="20dp"
+          android:text="@string/help"
+          android:textColor="@color/black" />
+    </FrameLayout>
+
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/changeMode"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:background="@drawable/a_bit_rounded_button"
+      android:backgroundTint="@color/qiwi_orange"
+      android:ems="16"
+      android:onClick="onClickChangeMode"
+      android:paddingStart="10dp"
+      android:paddingEnd="10dp"
+      android:text="@string/go_to_purchaser_mode"
+      android:textAllCaps="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+  <Button
+      android:id="@+id/exitApp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="80dp"
+      android:background="@drawable/a_bit_rounded_button"
+      android:ems="16"
+      android:onClick="onClickExitApp"
+      android:paddingStart="10dp"
+      android:paddingEnd="10dp"
+      android:text="@string/exit_app"
+      android:textAllCaps="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
