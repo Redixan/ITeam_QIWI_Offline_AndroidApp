@@ -5,7 +5,6 @@ import static android.graphics.Color.WHITE;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
@@ -18,8 +17,22 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
+import org.springframework.http.HttpHeaders;
+import org.springframework.web.client.RestTemplate;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.EnumMap;
 import java.util.Map;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import qiwi.tokenlogics.api.CallAPI;
 
 public class QRpayPurchaserAcitivity extends AppCompatActivity {
 
@@ -28,16 +41,17 @@ public class QRpayPurchaserAcitivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_qrpay_purchaser);
 
         QRcodeImage = (ImageView) findViewById(R.id.QRCodeImage);
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_qrpay_purchaser);
         try {
             createQRCode();
         } catch (WriterException e) {
             e.printStackTrace();
         }
+        System.out.println(userInit());
     }
 
     public void onClickReady(View view) {
@@ -54,6 +68,7 @@ public class QRpayPurchaserAcitivity extends AppCompatActivity {
     }
 
     private void createQRCode() throws WriterException {
+//        String getTokenID();
         Bitmap barcode_bitmap = encodeAsBitmap(tokenID, BarcodeFormat.QR_CODE, 270, 270);
         QRcodeImage.setImageBitmap(barcode_bitmap);
     }
@@ -101,4 +116,10 @@ public class QRpayPurchaserAcitivity extends AppCompatActivity {
         }
         return null;
     }
+
+    private String userInit() {
+        CallAPI callAPI = new CallAPI();
+        return callAPI.doInBackground();
+    }
+
 }

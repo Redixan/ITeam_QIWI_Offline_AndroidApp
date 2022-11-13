@@ -58,8 +58,8 @@ public class MerchantActivity extends AppCompatActivity {
             if (intentResult.getContents() == null) {
                 Toast.makeText(getBaseContext(), "Scanner cancelled", Toast.LENGTH_SHORT).show();
             } else {
-                //messageLabel.setText(intentResult.getContents());
-                // LOGIC HERE after scanning
+                Intent intent = new Intent(this, WaitingForPurchaserPaymentActivity.class);
+                startActivity(intent);
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
